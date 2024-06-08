@@ -1,0 +1,36 @@
+@import "../scss/constans.scss";
+
+
+.show {
+  visibility: visible;
+  max-height: toRem(30);
+  background-color: #fff;
+  padding: toRem(10);
+  border-radius: toRem(5);
+  border: toRem(1) solid $blackColor;
+  margin-bottom: toRem(10);
+  max-width: toRem(250);
+  margin-left: auto;
+}
+.not_show {
+  visibility: visible;
+}
+.show-error {
+  border: toRem(1) solid #f44336;
+}
+
+.show-success {
+  border: toRem(1) solid #4caf50;
+}
+
+.toast-error {
+  color: #f44336;
+}
+
+.toast-success {
+  color: #4caf50;
+}
+
+.toast-information {
+  color: #2196f3
+}

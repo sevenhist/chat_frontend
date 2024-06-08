@@ -1,0 +1,105 @@
+@import "../../scss/constans.scss";
+
+.menu {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: toRem(300);
+    width: 100%;
+    padding-left: toRem(25);
+    border-right: toRem(1) solid $greyBorder;
+    &__title_and_input {
+        margin-top: toRem(27);
+        display: flex;
+        flex-direction: column;
+        row-gap: toRem(18);
+        position: relative;
+        left: toRem(-15);
+    }
+    &__title {
+        font-size: toRem(23);
+        font-weight: 700;
+        line-height: toRem(16);
+        color: $blackColor;
+    }
+    &__search {
+        position: relative;
+        width: 100%;    
+    }
+    &__icon {
+        position: absolute;
+        left: toRem(10); // Положение иконки
+        top: 45%;
+        transform: translateY(-50%);
+        width: toRem(10);
+        height: toRem(10);
+        border: toRem(2) solid #676767; // Цвет иконки
+        border-radius: 50%; // Круглая часть лупы
+        box-sizing: border-box;
+        cursor: pointer;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 100%;
+            top: 55%;
+            width: toRem(5);
+            height: toRem(2);
+            background-color: #676767;
+            transform: translate(0, 145%) rotate(60deg);
+            transform-origin: top left;
+            border-radius: 20px;
+        }
+    }
+    &__input {
+        width: 100%;
+        height: toRem(36);
+        border-radius: toRem(12);
+        gap: toRem(16);
+        outline: none;
+        border: toRem(1) solid $greyColor;
+        background-color: $greyColor;
+        box-sizing: border-box;
+        padding-left: toRem(38);
+        &::placeholder {
+            font-weight: 400;
+            font-size: toRem(14);
+        }
+    }
+    &__list {
+        padding-inline-start: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: toRem(16);
+        align-items: end;
+    }
+    &__item {
+        list-style: none;
+        width: 100%;
+        display: flex;
+        column-gap: toRem(20);
+        padding: toRem(10) toRem(12);
+        &:hover {
+            cursor: pointer;
+            background-color: #EEEEEE;
+        }
+    }
+    &__user__photo {
+        width: toRem(36);
+        height: toRem(36);
+        border-radius: toRem(50);
+        border: toRem(1) solid $whiteBackground;
+    }
+    &__information {
+
+    }
+    &__user__title {
+        margin: 0;
+        padding: 0;
+    }
+    &__user__text {
+        margin: 0;
+        padding: 0;
+    }
+}

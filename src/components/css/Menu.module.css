@@ -1,0 +1,140 @@
+@charset "UTF-8";
+@supports (font-size: clamp( 1rem , 0.9649122807rem  +  0.1754385965vw , 1.125rem )) {
+  .body {
+    font-size: clamp( 1rem , 0.9649122807rem  +  0.1754385965vw , 1.125rem );
+  }
+}
+@supports not (font-size: clamp( 1rem , 0.9649122807rem  +  0.1754385965vw , 1.125rem )) {
+  .body {
+    font-size: calc(1rem + 0.125 * (100vw - 20rem) / 71.25);
+  }
+}
+.lock .body {
+  overflow: hidden;
+  touch-action: none;
+}
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.wrapper > main {
+  flex: 1 1 auto;
+}
+.wrapper > * {
+  min-width: 0;
+}
+
+/*
+(i) Стили будут применяться ко 
+всем классам содержащим *__container
+Например header__container, main__container и т.д.
+Снипет (HTML): cnt
+*/
+.navbar {
+  height: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 3.375rem;
+  width: 100%;
+  background-color: #FAFAFA;
+  position: relative;
+}
+.navbar__list {
+  padding-top: 1.3125rem;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  row-gap: 0.875rem;
+  height: 100vh;
+  margin: 0;
+}
+.navbar__underlist {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  row-gap: 0.875rem;
+  flex: 1;
+}
+.navbar__item {
+  list-style: none;
+  width: 2rem;
+  height: 2rem;
+}
+.navbar__item:hover {
+  cursor: pointer;
+}
+.navbar__item img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 3.125rem;
+}
+.navbar__choice {
+  list-style: none;
+  width: 2.625rem;
+  height: 2.625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+.navbar__choice:hover {
+  background-color: #27AE60;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+.navbar__choice:hover img {
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(200%) contrast(100%);
+}
+.navbar__choice img {
+  width: 1.125rem;
+  height: 1.125rem;
+  fill: currentColor;
+}
+.navbar__profile_photo {
+  width: 2rem !important;
+  height: 2rem !important;
+  border-radius: 3.125rem;
+}
+.navbar__logo {
+  width: 1.833125rem !important;
+  height: 1.216875rem !important;
+  border-radius: 3.125rem;
+}
+.navbar__underline {
+  border: 0.0625rem solid rgba(0, 0, 0, 0.1019607843);
+  margin-top: 1.4375rem;
+  margin-bottom: 0.875rem;
+  max-width: 2.25rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.navbar__undermenu {
+  position: relative;
+  bottom: 0;
+  padding: 0;
+}
+.navbar__profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 2rem;
+  height: 2rem;
+  background-color: #27AE60;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.choice:hover {
+  background-color: #FAFAFA;
+  opacity: 0.7;
+}

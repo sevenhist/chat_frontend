@@ -1,0 +1,13 @@
+@import "../../scss/constans.scss";
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: toRem(20);
+    max-width: 200px;
+    padding-bottom: toRem(20);
+}
+.toast {
+    width: toRem(100);
+    height: toRem(40);
+}

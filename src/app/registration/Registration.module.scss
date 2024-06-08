@@ -1,0 +1,9 @@
+@import "../../scss/constans.scss";
+
+.registration__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: toRem(20);
+    max-width: 200px;
+    padding-bottom: toRem(20);
+}
